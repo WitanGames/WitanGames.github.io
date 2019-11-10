@@ -1,0 +1,71 @@
+/*Эти свойства применяются к всему*/
+* {
+	margin:0; /*Внешний отступ*/
+	padding:0;/*Внутрений отступ*/
+	box-sizing: border-box; /*Алгоритм рассчтёта размеров*/
+	-webkit-box-sizing: border-box; /*^Только для других браузеров^*/
+	-moz-box-sizing:border-box;
+}
+
+body{
+background-color: #eee; /*Цвет фона всей страницы*/
+}
+/*Стили для элемента с ID равным "main"*/
+#main {
+	background-color: #fff;/*Цвет фона элемента "main"*/
+	margin: auto; /*Одинаковый внешние отступы*/
+	display: flex; /*Отображение элементов в строчку*/
+	width: 95%; /*Ширина элемента с ID равным "main"*/
+	max-width:800px; /*Максимальная ширина элемента*/
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3); /*Тень объекта, rgba - красный, зелёный, синий, прозрачность*/
+	flex-wrap: wrap; /*Правила переноса*/
+}
+/*Стили для элеманта с CLASS равным "item"*/
+.img-box{
+	column-count: 4;/*Кол-во колонок*/
+	column-gap: 3px;/*Отступ между колонками*/
+	max-width:1400px; 
+	margin: auto;
+}
+.image {
+	display: flex;
+	max-width: 100%;
+	display: block;
+	transition: 1.5s
+}
+.image-link{
+	display:block;
+}
+.image-link + .image-link{
+	margin:3px;
+}
+
+#golova{
+		background: linear-gradient(45deg, red, purple);
+		opacity: 0;
+
+}
+
+
+@media all and (max-width: 768px){
+	.image-link{
+		max-width: initial;
+		max-height:initial ;
+		width: 95vm;
+		height: calc(95vm / 16 * 9);
+		margin: 5px 0;
+	}
+}
+
+@media all and (min-width: 1200px){
+	.image:hover{
+		transform: scale(1.1) rotate(4608000000deg);/*scale -- маштобирование,
+										rotate -- поворотник*/
+		/*transition: transform 100s ease-out, box-shadow 0.3 linear;*/
+		box-shadow:0 0 16000px 9000px rgba(0,0,0,1); 
+	}
+	#golova:hover{
+		opacity: 1;
+		transition: 1s;
+	}
+}
