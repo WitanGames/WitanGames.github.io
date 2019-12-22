@@ -1,0 +1,121 @@
+@media all and (min-width:1150px){
+    #b1:hover{
+        background: #00897b;
+        border-color: transparent;
+    }
+
+    #b2:hover{
+        background: none;
+        border: 3px solid;
+    }
+
+    .nav-link:hover{
+        background-color: black;
+        color: white;
+    }
+
+    .second-item:hover .readmore{
+        background: #00897b;
+        color:white;
+        border: 3px solid white;
+    }
+    .readmore:hover{
+        border: 3px solid white;
+        color: white;
+    }
+
+    .second-item:hover{
+        background: #00897b;
+        color:white;
+        transform: scale(1.05);
+        box-shadow: 0 0 40px 5px rgb(0, 0, 0, 0.3);
+    }
+
+    .second-item:hover .icon{
+        fill: white;
+    }
+    .va:hover{
+        background: white;
+        color: #00897b;
+        transition: 0.3s;
+        box-shadow: 0 0 40px 5px rgb(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+    .foto:hover{
+        filter: brightness(1);
+    }
+    .foto{
+        filter: blur(3px);
+    }
+}
+
+@media all and (max-width: 786px){
+    .nav-wrapper{
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .logo, .search-wrapper, .topnav{
+        display: inline-block;
+    }
+    
+    .header-btn{
+        width: 90vw;
+        height: 60px;
+        margin-top: 15px;
+    }
+    .h1{
+        font-size: 8vw;
+    }
+    .header-btn + .header-btn{
+        margin-left:0;
+    }
+
+    .second-item, .first-item{
+        width: 90%;
+        margin: 20px auto;
+        padding-right: 10%;
+        padding-left:10%;
+    }
+
+    .first-box, .contact-box{
+        flex-wrap: wrap;
+    }
+    .section-subtitle{
+        width: 80%;
+    }
+
+    .tab>label{
+        width: 100%;
+        height: 60px;
+        margin-top: 15px;
+        font-size: 3rem;
+    }
+    .tab>label[for="tab_2"]{
+        margin-left: 0;
+    }
+    .tab>label[for="tab_3"]{
+        margin-left: 0;
+    }
+    .foto{
+        width: 100%;
+    }
+    .tab{width: 90vm;}
+    .va{
+        width: 100%;
+    }
+    .form>input{
+        width: 90vm;
+        margin-top: 15px;
+    }
+}
+
+@media all and (max-width: 907px) and (min-width: 769px){
+    .tab>label[for="tab_3"]{
+        width: calc(50% + 20px);
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    .foto{
+        width: 45%;
+    }
+}
